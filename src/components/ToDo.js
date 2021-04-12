@@ -17,6 +17,7 @@ class ToDo extends React.Component {
     if (localStorage.length === 0) this.clearItemList();
 
     if (todoListState === null) {
+      
       localStorage.setItem("todos", JSON.stringify([currentToDo]));
     } else {
       localStorage.setItem(todoListState.length + "color", "");

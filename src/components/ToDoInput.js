@@ -2,6 +2,11 @@ import React from "react";
 import { Button, Input, Box, Divider } from "@chakra-ui/react";
 
 class ToDoInput extends React.Component {
+
+  componentDidMount() {
+    this.searchInput.focus();
+  }
+
   render() {
     return (
       <Box m="10px">
@@ -15,6 +20,7 @@ class ToDoInput extends React.Component {
                   onChange={this.props.currentInputHandler}
                   type="text"
                   class="input"
+                  ref={inputEl => (this.searchInput = inputEl)}
                 />
               </div>
               <div class="col-sm-12 col-lg-1 col-md-4 inputBtn">
